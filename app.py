@@ -851,7 +851,7 @@ valid = seva[
     != ""
 ]
 
-k = st.columns(6)
+k = st.columns(2)
 
 k[0].metric(
     "Members",
@@ -876,43 +876,43 @@ k[1].metric(
     ),
 )
 
-k[2].metric(
-    "Seva Entries",
-    len(valid),
-)
+# k[2].metric(
+#     "Seva Entries",
+#     len(valid),
+# )
 
-k[3].metric(
-    "Completed",
-    int(
-        valid["Status"]
-        .astype(str)
-        .str.lower()
-        .eq("completed")
-        .sum()
-    ),
-)
+# k[3].metric(
+#     "Completed",
+#     int(
+#         valid["Status"]
+#         .astype(str)
+#         .str.lower()
+#         .eq("completed")
+#         .sum()
+#     ),
+# )
 
-k[4].metric(
-    "Confirmed",
-    int(
-        valid["Status"]
-        .astype(str)
-        .str.lower()
-        .eq("confirmed")
-        .sum()
-    ),
-)
+# k[4].metric(
+#     "Confirmed",
+#     int(
+#         valid["Status"]
+#         .astype(str)
+#         .str.lower()
+#         .eq("confirmed")
+#         .sum()
+#     ),
+# )
 
-k[5].metric(
-    "Planned",
-    int(
-        valid["Status"]
-        .astype(str)
-        .str.lower()
-        .eq("planned")
-        .sum()
-    ),
-)
+# k[5].metric(
+#     "Planned",
+#     int(
+#         valid["Status"]
+#         .astype(str)
+#         .str.lower()
+#         .eq("planned")
+#         .sum()
+#     ),
+# )
 
 
 # ============================================================
