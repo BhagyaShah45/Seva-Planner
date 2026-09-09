@@ -841,40 +841,40 @@ if quick_search.strip():
 # DASHBOARD
 # ============================================================
 
-st.divider()
-st.subheader("📊 Dashboard")
+#st.divider()
+#st.subheader("📊 Dashboard")
 
-valid = seva[
-    seva["Building"]
-    .astype(str)
-    .str.strip()
-    != ""
-]
+#valid = seva[
+#    seva["Building"]
+#    .astype(str)
+ #   .str.strip()
+ #   != ""
+#]
 
-k = st.columns(2)
+#k = st.columns(2)
 
-k[0].metric(
-    "Members",
-    int(
-        (
-            members["Name"]
-            .astype(str)
-            .str.strip()
-            != ""
-        ).sum()
-    ),
-)
+#k[0].metric(
+   # "Members",
+   # int(
+     #   (
+        #    members["Name"]
+          #  .astype(str)
+      #      .str.strip()
+         #   != ""
+      #  ).sum()
+   # ),
+#)
 
-k[1].metric(
-    "Buildings",
-    int(
-        members["Building"]
-        .astype(str)
-        .str.strip()
-        .replace("", pd.NA)
-        .nunique()
-    ),
-)
+#k[1].metric(
+ #   "Buildings",
+   # int(
+ #       members["Building"]
+    #    .astype(str)
+    #    .str.strip()
+    #    .replace("", pd.NA)
+     #   .nunique()
+   # ),
+#)
 
 # k[2].metric(
 #     "Seva Entries",
